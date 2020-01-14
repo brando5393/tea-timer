@@ -1,13 +1,22 @@
 body{
     font-family: 'Roboto Slab', serif;
+    background-image: url(https://i.pinimg.com/736x/2d/16/7c/2d167cf67c0c68a083dad6748a3a29c5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Kaushan Script', cursive;
 }
 
-ul.instruction{
-    list-style-image: url(assets\images\bullet-list-image.png);
+main{
+    color: brown;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: url(https://res.cloudinary.com/govimg/image/upload/q_80,f_auto,w_2000,h_2000,c_limit/v1516287477/5a5f7a6b41a5361ef1395dbc/leaf-01.png);
+    background-position: center;
 }
 
 .cool-tea-fact{
@@ -22,6 +31,15 @@ ul.instruction{
     color: red;
 }
 
+.jumbotron{
+background-color: seagreen;
+color: white;
+}
+
+.tea-info-heading{
+    text-align: center;
+}
+
 #app-logo-area{
     text-align: center;
 }
@@ -33,4 +51,11 @@ ul.instruction{
 
 #coded-for-text{
     text-align: center;
+    background-color: seagreen;
+    color: white;
+    width: 100%;
+}
+
+#tea-maker-info-area{
+    font-family: 'Roboto Slab', serif;
 }
