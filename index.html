@@ -12,6 +12,7 @@
     <!-- main -->
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- ===FONTS=== -->
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto+Slab&display=swap" rel="stylesheet">
     <!-- ===FONT AWESOME=== -->
     <script src="https://kit.fontawesome.com/83aa8d8bfe.js" crossorigin="anonymous"></script>
     <!-- ===JAVASCRIPT LINKS=== -->
@@ -36,12 +37,31 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="jumbotron">
-                        <h1 class="display-4">Hello, world!</h1>
-                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                        <div id="app-logo-area">
+                            <img src="assets/images/tea-pot.png" class="image-thumbnail" id="app-logo" alt="app logo">
+                        </div>
+                        <h1 class="display-4">Simple Tea Timer</h1>
+                        <p class="lead">Lets face it, for a tea lover nothing beats a good cup of tea. The hardest part
+                            about making a cup of tea however, is waiting for it to steep, and then cool down enough to
+                            be drinkable. While this app can't tell you the appropriate temperature of your tea, it can
+                            at least help you through the first part of the process.</p>
                         <hr class="my-4">
-                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                      </div>
+                        <div id="instructions-container">
+                            <h6 id="instructions-heading">To use this app:</h6>
+                            <br>
+                            <ul id="instructions-list">
+                                <li class="instruction">First, select the brand of tea being brewed</li>
+                                <li class="instruction">Next, select the variety of tea</li>
+                                <li class="instruction">Then select weather to use the recommended steeping duration or
+                                    set a custom one</li>
+                                <sub id="instruction-note">Please note that the brand of "other" automatically requires
+                                    a custom steeping duration to be set.</sub>
+                                <li class="instruction">Click the start steeping button and enjoy some fun facts and
+                                    peaceful music while you wait for your tea. 😄</li>
+                            </ul>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -50,6 +70,7 @@
                 <div class="col-lg-4">
                     <div class="row">
                         <div class="col-lg-12">
+                            <h3>A Spot of Tea History</h3>
                             <div id="tea-maker-image-container">
 
                             </div>
@@ -74,40 +95,100 @@
                                     <option>Lipton</option>
                                     <option>Bigelow</option>
                                     <option>Celestial Seasonings</option>
-                                    <option>Other</option>                                 
-                                  </select>
-                              </div>
-                              <div class="form-group">
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="tea-variety">What variety of tea are you preparing?</label>
                                 <select class="form-control" id="tea-variety">
-                                  </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="time-options">Would you like to use your tea's recommended steeping time or a custom duration?</label>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="time-options">Would you like to use your tea's recommended steeping time or
+                                    a custom duration?</label>
                                 <br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="time-options-radio" id="time-options-recommended-radio" value="recommended">
-                                    <label class="form-check-label" for="time-options-recommended-radio">Recommended</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="time-options-radio" id="time-options-custom-radio" value="custom">
+                                    <input class="form-check-input" type="radio" name="time-options-radio"
+                                        id="time-options-recommended-radio" value="recommended">
+                                    <label class="form-check-label"
+                                        for="time-options-recommended-radio">Recommended</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="time-options-radio"
+                                        id="time-options-custom-radio" value="custom">
                                     <label class="form-check-label" for="time-options-custom-radio">Custom</label>
-                                  </div>
-                              </div>
-                              <button type="submit" class="btn btn-success btn-lg btn-block">Start Steeping</button>                               
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-lg btn-block start-btn"><i
+                                    class="fas fa-stopwatch timer-icon"></i> Start Steeping</button>
                         </form>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
                         <div class="col-lg-12">
+                            <h3>Cool Tea Facts</h3>
                             <div id="tea-image-area">
 
                             </div>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div id="cool-tea-facts">
-
+                                        <div id="tea-facts-carousel" class="carousel slide" data-ride="carousel"
+                                            data-pause="hover">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <h5 class="cool-tea-fact">Et aut repellendus eaque. Voluptatem
+                                                        delectus praesentium ducimus rerum. Eum amet accusantium.</h5>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleControls"
+                                                role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleControls"
+                                                role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +198,14 @@
             </div>
         </main>
         <footer>
-
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="coded-for-text">
+                        <h6>Coded for the <i class="fas fa-heart heart-icon"></i> of tea by Brandon Williams</h6>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 </body>

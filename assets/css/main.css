@@ -1,0 +1,36 @@
+body{
+    font-family: 'Roboto Slab', serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Kaushan Script', cursive;
+}
+
+ul.instruction{
+    list-style-image: url(assets\images\bullet-list-image.png);
+}
+
+.cool-tea-fact{
+    font-family: 'Roboto Slab', serif;
+}
+
+.display-4, .loea{
+    text-align: center;
+}
+
+.heart-icon{
+    color: red;
+}
+
+#app-logo-area{
+    text-align: center;
+}
+
+#app-logo{
+    height: 200px;
+    width: auto;
+}
+
+#coded-for-text{
+    text-align: center;
+}
